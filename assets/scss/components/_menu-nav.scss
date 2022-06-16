@@ -1,0 +1,79 @@
+.menu-nav {
+    padding-top: 25px;
+
+    @include breakpoint($breakpoint-xs) {
+        padding-top: 15px;
+    }
+
+    &__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    &__item {
+        padding: 5px 5px 5px 0;
+
+        @include font(26px, 900, 1.25);
+        white-space: nowrap;
+
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+
+        &:before {
+            content: '';
+            @include element-position-tr(0, 26px, 12px, 0);
+            margin-left: 20px;
+
+            background: linear-gradient(90deg, rgba(221, 67, 41, 0) 0%, rgba(197, 49, 45, 0.8) 46.35%, rgba(201, 51, 46, 0) 96.35%);
+            opacity: .8;
+
+            -webkit-transition: 0.2s linear;
+            -o-transition: 0.2s linear;
+            transition: 0.2s linear;
+
+            @include breakpoint($breakpoint-xs) {
+                display: none;
+            }
+        }
+
+        &:after {
+            content: '';
+            width: 0;
+            height: 3px;
+
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            background-color: $element-color-accent;
+            -webkit-transition: 0.2s linear;
+            -o-transition: 0.2s linear;
+            transition: 0.2s linear;
+        }
+
+        &:hover:before {
+            width: 43px;
+            left: 0;
+        }
+
+        &:hover:after {
+            width: 100%;
+            left: 0;
+        }
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 4px;
+            font-size: 20px;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,107 @@
+.capabilities {
+
+    &__wrapper {
+        padding-bottom: 92px;
+        position: relative;
+
+        @include breakpoint($breakpoint-xs) {
+            padding-bottom: 25px;
+        }
+    }
+
+    &__poster {
+        width: 100%;
+        height: 350px;
+        padding: 70px 140px;
+        margin-bottom: 108px;
+
+        background: $element-color;
+        border-radius: 300px;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 175px;
+            padding: 34px 28px 0 20px;
+            height: 288px;
+
+            border-radius: 20px;
+        }
+    }
+
+    &__poster-title {
+        margin: -5px 0 33px;
+        @include font(80px, 900, 0.93);
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 19px;
+            font-size: 26px;
+        }
+    }
+
+    &__poster-addition {
+        margin: 0;
+
+        font-size: 26px;
+        line-height: 125%;
+
+        @include breakpoint($breakpoint-xs) {
+            font-size: 16px;
+            line-height: 1.3;
+        }
+    }
+
+    &__decorative-line {
+        @include element-position-tr(508px, 185px, 222px, -30px);
+
+        @include breakpoint($breakpoint-xs) {
+            display: none;
+        }
+    }
+
+    &__star-one,
+    &__star-two {
+        display: none;
+
+        @include breakpoint($breakpoint-xs) {
+            display: block;
+        }
+    }
+
+    &__star-one {
+        @include breakpoint($breakpoint-xs) {
+            @include element-position-tr(14px, 14.5px, 30px, 68px);
+            -webkit-transform: rotate(35deg);
+            -ms-transform: rotate(35deg);
+            transform: rotate(35deg);
+        }
+    }
+
+    &__star-two {
+        @include breakpoint($breakpoint-xs) {
+            @include element-position-tr(10px, 10.5px, 83px, 25px);
+            -webkit-transform: rotate(53deg);
+            -ms-transform: rotate(53deg);
+            transform: rotate(53deg);
+        }
+    }
+
+    &__item-title {
+        margin-bottom: 28px;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 22px;
+        }
+    }
+
+    &__item-addition {
+        font-size: 26px;
+        line-height: 1.25;
+    }
+
+    &__img {
+        @include element-position-tr(756px, 501px, 323px, -130px);
+
+        @include breakpoint($breakpoint-xs) {
+            @include element-position-tr(260px, 201px, 184px, -16px);
+        }
+    }
+}

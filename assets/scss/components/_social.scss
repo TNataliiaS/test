@@ -1,0 +1,35 @@
+.social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 20px;
+
+    &__item {
+        -webkit-transition: opacity 0.2s linear;
+        -o-transition: opacity 0.2s linear;
+        transition: opacity 0.2s linear;
+
+        &:hover {
+            opacity: .7;
+        }
+
+        &:not(:last-child) {
+            margin-right: 10px;
+
+            @include breakpoint($breakpoint-xs) {
+                margin-right: 6px;
+            }
+        }
+    }
+
+    &__icon {
+        display: block;
+        width: 40px;
+        height: 40px;
+
+        @include breakpoint($breakpoint-xs) {
+            width: 25.5px;
+            height: 25.5px;
+        }
+    }
+}

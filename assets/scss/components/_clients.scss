@@ -1,0 +1,93 @@
+.clients {
+    padding-bottom: 72px;
+
+    @include breakpoint($breakpoint-xs) {
+        padding-bottom: 27px;
+    }
+
+    &__title {
+        margin-top: -15px;
+        margin-bottom: 82px;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 31px;
+        }
+    }
+
+    &__wrapper {
+        @extend %flex-align-center;
+        height: 350px;
+
+        position: relative;
+
+        background: $element-color;
+        border-radius: 300px;
+
+        @include breakpoint($breakpoint-xs) {
+            height: 155px;
+            border-radius: 20px;
+        }
+    }
+
+    &__slider {
+        width: 840px;
+
+        @include breakpoint($breakpoint-xs) {
+            width: 200px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+
+    &__list {
+        height: auto;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+
+        @include breakpoint($breakpoint-xs) {
+            height: 100px;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+
+            .swiper-slide {
+                height: calc((100% - 10px) / 2);
+            }
+        }
+    }
+
+    &__item {
+        -ms-flex-negative: 1;
+        flex-shrink: 1;
+        margin-right: 40px;
+
+        @include breakpoint($breakpoint-xs) {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            margin-right: 0;
+        }
+    }
+
+    &__slider-btn {
+        @include breakpoint($breakpoint-xs) {
+            top: 88.5px;
+
+            &.slider-btn--prev {
+                left: 5px;
+            }
+
+            &.slider-btn--next {
+                right: 5px;
+            }
+        }
+    }
+}

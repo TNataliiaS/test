@@ -1,0 +1,31 @@
+.promotions-slider {
+    position: relative;
+
+    &__item {
+        width: 1180px;
+        height: 600px;
+
+        @include breakpoint($breakpoint-xs) {
+            width: 260px;
+            height: 443px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        -o-object-fit: cover;
+        object-fit: cover;
+
+        @include breakpoint($breakpoint-xs) {
+            border-radius: 20px;
+        }
+    }
+
+    &__btn {
+        @include breakpoint($breakpoint-xs) {
+            display: none;
+        }
+    }
+}

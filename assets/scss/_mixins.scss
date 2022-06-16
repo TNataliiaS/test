@@ -1,0 +1,31 @@
+@mixin font($size, $weight, $height) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+@mixin element-position-tl($width, $height, $top, $left) {
+    width: $width;
+    height: $height;
+
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin element-position-tr($width, $height, $top, $right) {
+    width: $width;
+    height: $height;
+
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+
+// Breakpoint
+@mixin breakpoint($br) {
+    @media (max-width: $br) {
+        @content;
+    }
+}

@@ -1,0 +1,13 @@
+.product-control {
+    @extend %flex-align-center;
+
+    &__icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    &__quantity {
+        margin: 0 12px;
+        color: #676767;
+    }
+}

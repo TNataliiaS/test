@@ -1,0 +1,180 @@
+.occasions {
+
+    &__wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        min-height: 694px;
+
+        position: relative;
+
+        @include breakpoint($breakpoint-xs) {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        margin-right: 80px;
+        width: 50%;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+
+        text-align: right;
+
+        @include breakpoint($breakpoint-xs) {
+            width: 100%;
+            max-width: 160px;
+            margin-right: 0;
+            -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+            order: 1;
+
+            text-align: left;
+        }
+    }
+
+    &__title {
+        margin-bottom: 27px;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 22px;
+        }
+    }
+
+    &__description {
+        width: 50%;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+
+        position: relative;
+
+        @include breakpoint($breakpoint-xs) {
+            width: 100%;
+            -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+            order: 2;
+            height: 1337px;
+        }
+
+    }
+
+    &__item {
+        &:nth-child(1) {
+            @include element-position-tl(260px, 260px, 19px, 141px);
+
+            @include breakpoint($breakpoint-xs) {
+                top: 17px;
+                left: 20px;
+                z-index: 1;
+            }
+        }
+
+        &:nth-child(2) {
+            @include element-position-tl(240px, 240px, 235px, 318px);
+            z-index: 2;
+
+            @include breakpoint($breakpoint-xs) {
+                top: 286px;
+                left: 0;
+            }
+        }
+
+        &:nth-child(3) {
+            @include element-position-tl(230px, 230px, 464px, 227px);
+
+            @include breakpoint($breakpoint-xs) {
+                top: 796px;
+                left: 0;
+            }
+        }
+
+        &:nth-child(4) {
+            @include element-position-tl(250px, 250px, 270px, 43px);
+
+            @include breakpoint($breakpoint-xs) {
+                top: 536px;
+                left: 29px
+            }
+        }
+    }
+
+    &__brusketta-one {
+        @include element-position-tl(441px, 407px, 359px, 840px);
+        -webkit-transform: rotate(177deg);
+        -ms-transform: rotate(177deg);
+        transform: rotate(177deg);
+
+        @include breakpoint($breakpoint-xs) {
+            @include element-position-tl(270px, 272px, 1315px, 55px);
+        }
+    }
+
+    &__brusketta-two {
+        @include element-position-tr(482px, 498px, 242px, 235px);
+        -webkit-transform: rotate(49deg);
+        -ms-transform: rotate(49deg);
+        transform: rotate(49deg);
+
+        @include breakpoint($breakpoint-xs) {
+            @include element-position-tl(286px, 313px, 1161px, -35px);
+            -webkit-transform: rotate(101.6deg);
+            -ms-transform: rotate(101.6deg);
+            transform: rotate(101.6deg);
+        }
+    }
+
+    &__decorative-line {
+        @include element-position-tl(639px, 622px, 42px, 335px);
+
+        @include breakpoint($breakpoint-xs) {
+            @include element-position-tl(604px, 497px, -19px, -211px);
+            -webkit-transform: rotate(-180deg) scale(1, -1);
+            -ms-transform: rotate(-180deg) scale(1, -1);
+            transform: rotate(-180deg) scale(1, -1);
+        }
+    }
+
+    &__star-one {
+        @include element-position-tl(30px, 30px, 292px, 749px);
+
+        @include breakpoint($breakpoint-xs) {
+            @include element-position-tl(25px, 24.6px, 469px, 250px);
+            -webkit-transform: rotate(26.4deg);
+            -ms-transform: rotate(26.4deg);
+            transform: rotate(26.4deg);
+        }
+    }
+
+    &__star-two {
+        @include element-position-tl(20px, 20px, 551px, 754px);
+        -webkit-transform: rotate(-27deg);
+        -ms-transform: rotate(-27deg);
+        transform: rotate(-27deg);
+
+        @include breakpoint($breakpoint-xs) {
+            @include element-position-tl(20.4px, 20px, 753px, 8px);
+            -webkit-transform: rotate(-27deg);
+            -ms-transform: rotate(-27deg);
+            transform: rotate(-27deg);
+        }
+    }
+
+    &__star-three {
+        @include element-position-tr(29px, 29px, 622px, 123px);
+        -webkit-transform: rotate(-24deg);
+        -ms-transform: rotate(-24deg);
+        transform: rotate(-24deg);
+
+        @include breakpoint($breakpoint-xs) {
+            @include element-position-tl(21px, 20.5px, 1161px, 250px);
+            -webkit-transform: rotate(10.4deg);
+            -ms-transform: rotate(10.4deg);
+            transform: rotate(10.4deg);
+        }
+    }
+}

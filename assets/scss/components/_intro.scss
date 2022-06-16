@@ -1,0 +1,119 @@
+.intro {
+    padding-bottom: 130px;
+    position: relative;
+
+    @include breakpoint($breakpoint-xs) {
+        padding-bottom: 106px;
+    }
+
+    &__wrapper {
+        margin-bottom: 30px;
+        padding: 186px 0 65px;
+
+        position: relative;
+        border-bottom: 1px solid $base-color;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 13px;
+            padding-bottom: 367px;
+        }
+    }
+
+    &__title {
+        margin: 67px 0 55px;
+        @include font(148px, 900, 0.75);
+
+        @include breakpoint($breakpoint-xs) {
+            margin: 31px 0 21px;
+            font-size: 56px;
+        }
+    }
+
+    &__addition {
+        font-size: 26px;
+        line-height: 1.25;
+
+        @include breakpoint($breakpoint-xs) {
+            max-width: 230px;
+            font-size: 20px;
+        }
+    }
+
+    &__img {
+        @include element-position-tl(455px, 455px, 260px, 814px);
+        -webkit-filter: drop-shadow(4px 4px 89px rgba(0, 0, 0, 0.67));
+        filter: drop-shadow(4px 4px 89px rgba(0, 0, 0, 0.67));
+        -webkit-transform: rotate(17deg);
+        -ms-transform: rotate(17deg);
+        transform: rotate(17deg);
+
+        @include breakpoint($breakpoint-xs) {
+            @include element-position-tl(244px, 244px, 492px, 27px);
+        }
+    }
+
+    &__img-decorative {
+        @include element-position-tl(1890px, 329px, 784px, 530px);
+        z-index: -1;
+
+        -webkit-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+
+        @include breakpoint($breakpoint-xs) {
+            @include element-position-tl(1015px, 176px, 763px, -125px);
+        }
+    }
+
+    &__star-one {
+        @include element-position-tl(45px, 45px, 220px, 737px);
+        -webkit-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+
+        @include breakpoint($breakpoint-xs) {
+            @include element-position-tl(27.8px, 27.8px, 454px, 2px);
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+        }
+    }
+
+    &__star-two {
+        @include element-position-tl(40px, 40px, 234px, -57px);
+
+        @include breakpoint($breakpoint-xs) {
+            display: none;
+        }
+    }
+
+    &__star-three {
+        @include element-position-tl(20.5px, 20.5px, 660px, 939px);
+
+        @include breakpoint($breakpoint-xs) {
+            @include element-position-tl(11px, 11px, 649px, 260px);
+            -webkit-transform: rotate(11.5deg);
+            -ms-transform: rotate(11.5deg);
+            transform: rotate(11.5deg);
+        }
+    }
+
+    &__decorative-line {
+        @include element-position-tl(520px, 565px, 212px, 750px);
+
+        @include breakpoint($breakpoint-xs) {
+            @include element-position-tl(380px, 309px, 455px, -38px);
+        }
+    }
+
+    &__arrow {
+        @include element-position-tr(20.5px, 20.5px, 550px, -49px);
+        -webkit-transform: rotate(17deg);
+        -ms-transform: rotate(17deg);
+        transform: rotate(17deg);
+
+        @include breakpoint($breakpoint-xs) {
+            display: none;
+        }
+    }
+}

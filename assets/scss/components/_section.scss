@@ -1,0 +1,24 @@
+.section {
+    padding-top: 130px;
+
+    @include breakpoint($breakpoint-xs) {
+        padding-top: 80px;
+    }
+
+    &__title {
+        @include font(100px, 900, 1);
+
+        @include breakpoint($breakpoint-xs) {
+            font-size: 34px;
+        }
+    }
+
+    &__description {
+        font-size: 26px;
+        line-height: 1.25;
+
+        @include breakpoint($breakpoint-xs) {
+            font-size: 20px;
+        }
+    }
+}

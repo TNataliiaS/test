@@ -1,0 +1,42 @@
+.bubble {
+    @extend %flex-align-center;
+    border-radius: 50%;
+
+    &--content-dark {
+        color: $secondary-color;
+    }
+
+    &--one {
+        background: #ED5A22;
+    }
+
+    &--two {
+        background: $element-color-accent;
+    }
+
+    &--three {
+        background: $element-color;
+    }
+
+    &--four {
+        background: $base-color;
+    }
+
+    &__wrapper {
+        position: relative;
+        left: 15%;
+    }
+
+    &__title {
+        margin-bottom: 5px;
+        @include font(24px, 900, 1.25);
+    }
+
+    &__description {
+        margin: 0;
+        max-width: 205px;
+
+        font-weight: 500;
+        line-height: 1.5;
+    }
+}

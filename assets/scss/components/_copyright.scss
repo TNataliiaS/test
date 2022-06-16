@@ -1,0 +1,32 @@
+.copyright {
+    display: none;
+    padding-bottom: 50px;
+
+    line-height: 20px;
+
+    @include breakpoint($breakpoint-xs) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    &__terms {
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    &__text {
+        margin-bottom: 25px;
+    }
+
+    &__cookies {
+        max-width: 280px;
+
+        font-size: 12px;
+        line-height: 15px;
+    }
+}

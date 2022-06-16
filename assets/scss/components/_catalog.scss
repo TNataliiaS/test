@@ -1,0 +1,100 @@
+.catalog {
+
+    &__title {
+        margin-top: -5px;
+        margin-bottom: 28px;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 26px;
+        }
+    }
+
+    &__description {
+        margin-bottom: 47px;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 29px;
+        }
+    }
+
+    &__tabs-nav {
+        margin-bottom: 39px;
+        padding-top: 0;
+
+        @include breakpoint($breakpoint-xs) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__tabs-btn {
+        color: $base-color;
+
+        background: none;
+        border: 0;
+        cursor: pointer;
+
+        &--active {
+            color: #F1A593;
+
+            -webkit-transition: color 0.1s linear;
+            -o-transition: color 0.1s linear;
+            transition: color 0.1s linear;
+
+            &:hover:after {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            display: none;
+
+            @include breakpoint($breakpoint-xs) {
+                display: inline-block;
+            }
+        }
+
+        &--mobile-del {
+            @include breakpoint($breakpoint-xs) {
+                display: none;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 19px;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+
+    &__tabs-content {
+        display: none;
+
+        &--active {
+            display: -ms-grid;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 280px);
+            gap: 20px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+
+            @include breakpoint($breakpoint-xs) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            display: none;
+
+            @include breakpoint($breakpoint-xs) {
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+
+
+}
